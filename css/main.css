@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    color: whitesmoke;
+    margin: 0;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 3em;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    padding: 0.6em;
+    opacity: 0.9;
+    font-size: 1em;
+    border-radius: 15px;
+    color: rgba(255, 255, 255, 0.876);
+    font-weight: bold;
+}
+
+.btn-read {
+    background-color: blue;
+}
+
+.btn-update {
+    background-color: orange;
+}
+
+.btn-delete {
+    background-color: red;
+}
+
+table {
+    background-color: wheat;
+    position: relative;
+    opacity: 0.9;
+    border-radius: 40px;
+    border-collapse: collapse;
+    table-layout:fixed;
+    width: 70%;
+}
+
+.container {
+    color: rgb(44, 42, 42);
+    /* width: 5em;
+    height: 5em; */
+    /* position: relative; */
+    margin-top: 40px;
+}
+
+.new-book-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-content: center;
+    /* position: relative; */
+    column-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.book-input {
+    /* width:20em; */
+    border-radius: 5px;
+    height: 3em;
+}
+
+.inputs-container {
+    right: 20px;
+    background-color: transparent;
+    color: wheat;
+}
+
+
+.inputs-container .close {
+    right: 20px;
+    background-color: transparent;
+    color: wheat
+}
+
+#price {
+    max-width: 10em;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.title-header, .price-header, .id-header {
+    cursor: pointer;
+}
+
+.create-btn {
+    border-radius: 30px;
+    /* height: 40px; */
+    /* width: 150px; */
+    background-color: rgb(136, 197, 218);
+    /* margin: 0.6em 350%; */
+    font-size: 14px;
+}
+
+.error-msg {
+    font-weight: bold;
+    color: yellow;
+    height: 1em;
+    font-size: 1.1em;
+    /* background-color:wheat; */
+    /* opacity: 0.8; */
+    vertical-align: center;
+    text-align: left;
+    margin: auto;
+}
+
+.new-book, .update-book {
+    background-color: green;
+    border-radius: 30%;
+    width: 3.2em;
+    height: 3em;
+    text-align: center;
+    /* border:1px solid #666; */
+}
+
+.update-book {
+    background-color: orange;
+    width: 4.6em;
+    border-radius: 20px;
+}
+
+thead {
+    border-bottom: 1px solid #aaa;
+}
+
+tr:not(:last-child) {
+    border: 1px solid #aaa;
+}
+
+th{
+    border-top:none;
+    border-bottom:none;
+}
+
+td, th {
+    border-left: 1px solid #aaa;
+    text-align: center;
+    padding: 20px;
+}
+
+td:first-child, th:first-child {
+    border-left: none;
+}
+
+.book-cover {
+    width: 120px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.user-msg {
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
+    background-color: #111;
+    padding: 10px;
+    color: honeydew
+}
+
+.btn-close{
+    cursor: pointer;
+}
+
+.user-msg.open {
+    bottom: 10px;
+    transition: bottom .5s;
+}
+
+.modal {
+    width: 25%;
+    height: 65%;
+    padding: 20px;
+    position: fixed;
+    top: 120px;
+    left: 150%;
+    border-radius: 20px;
+    background-color: rgba(54, 122, 144, 0.85);
+    color: wheat
+}
+
+.modal.open {
+    text-align: center;
+    left: 72%;
+    right: 90;
+    transition: left 0.8s;
+    border-style: double;
+}
+
+.modal h3, h4 {
+    margin: 15px;
+}
+
+h4 {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    color: thistle;
+}
+
+.modal img {
+    width: 37%;
+    height: 40%;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+.modal button {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    color: wheat
+}
+
+.rate-container {
+    background-color: transparent;
+    color: #ececec
+}
+
+.rate-container .rateimg {
+    width: 20px;
+    height: 20px;
+    background-color: #ececec;
+    margin: 0 10px;
+    top: 4px;
+    position: relative;
+}
+
+
+.page-num {
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 50%;
+}
+
+.next, .prev{
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+}
+.disabled{
+    background-color: gray;
+    cursor:not-allowed;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 13px;
+    margin: 10px;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+
+
+@media screen and (max-width: 1250px) {
+
+    table {
+        position: relative;
+        opacity: 0.9;
+        border-radius: 40px;
+        border-collapse: collapse;
+        width: 60%;
+    }
+    .modal {
+        width: 45%;
+        height: 65%;
+        padding: 20px;
+        position: fixed;
+        top: 120px;
+        left: 150%;
+        border-radius: 20px;
+        background-color: rgba(54, 122, 144, 0.85);
+        color: wheat
+    }
+
+    .modal.open {
+        text-align: center;
+        left:62%;
+        width:35%;
+        transition: left 0.8s;
+        border-style: double;
+    }
+
+    .modal img {
+        width: 30%;
+        height: 37%;
+        border-radius: 7px;
+        margin-top: 35px;
+    }
+    
+
+
+}
+
+/* @media screen and (max-width: 1040px) {
+*/

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Book Shop</title>
+  </head>
+  <body onload="onInit()">
+    <div class="main-container">
+      <h1>Welcome to my Bookshop!</h1>
+      <div class="modal-container">
+        <div class="modal">
+          <button class="btn-close" onclick="onCloseModal()">X</button>
+          <h3 class="book-title">Book Title</h3>
+          <h4 class="book-price">Price $<span></span></h4>
+          <p class="book-desc"></p>
+          <p class="book-id-hidden" hidden></p>
+          <div class="rate-container">
+            <img
+              class="rateimg"
+              src="img/minus.png"
+              onclick="onChangeRate('minus')"
+            /><span>0</span
+            ><img
+              class="rateimg"
+              onclick="onChangeRate('plus')"
+              src="img/plus.png"
+            />
+          </div>
+          <img class="book-cover" src="" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="new-book-container">
+          <button class="btn create-btn" onclick="displayInput()">
+            Create New Book
+          </button>
+          <div class="inputs-container" style="display: none">
+            <input
+              class="book-input"
+              type="text"
+              id="title"
+              placeholder="Enter a book title"
+            />
+            <input
+              class="book-input"
+              type="number"
+              id="price"
+              placeholder="Enter a price in $"
+            />
+            <button class="book-input btn new-book" onclick="onAddBook()">
+              Add
+            </button>
+            <button class="book-input btn update-book" onclick="onUpdateBook()">
+              Update
+            </button>
+            <button class="close" onclick="onCloseCreateInputs()">X</button>
+            <span class="book-input error-msg"> Must enter full details</span>
+          </div>
+        </div>
+        <table class="bookshop-catalog">
+          <thead>
+            <tr>
+              <th class="id-header" onclick="onSetSortBy('id')">Id </th>
+              <th class="title-header" onclick="onSetSortBy('title')">Title</th>
+              <th class="price-header" onclick="onSetSortBy('price')">Price</th>
+              <th colspan="3">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="book-list"></tbody>
+        </table>
+        <a href="#" onclick="onPrevPage()"class="prev">&#8249;&#8249;</a>
+        <a href="#" onclick="onNextPage(-1)" class="page-num">1</a>
+        <a href="#" onclick="onNextPage(0)" class="page-num">2</a>
+        <a href="#" onclick="onNextPage(1)" class="page-num">3</a>
+        <a href="#" onclick="onNextPage()" class="next">&#8250;&#8250;</a>
+      </div>
+    </div>
+    <div class="user-msg"></div>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/bookshop.service.js"></script>
+    <script src="js/bookshop.controller.js"></script>
+  </body>
+</html>
